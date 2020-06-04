@@ -1,0 +1,17 @@
+<mapper namespase="com.mapper.IUserMapper">
+
+
+    <select id="findOne" paramterType="com.User" resultType="com.User">
+        select * from user where id = #{id}
+        and username =  #{username}
+    </select>
+    <insert id="createOne" paramterType="com.User">
+        insert into user(id,username) VALUES (#{id},#{username})
+    </insert>
+    <update id="updateOne" paramterType="com.User">
+        update   user set username= #{username} where id=#{id}
+    </update>
+    <delete id="deleteOne" paramterType="com.User">
+        delete  from user   where id=#{id}
+    </delete>
+</mapper>
